@@ -27,42 +27,38 @@ void mousePressed()
 }
 class Die
 {
-  //member variable declarations here
   int diceNum, MyX, MyY;
-  Die(int x, int y) //constructor
+  Die(int x, int y) 
   {
-    //variable initializations here
     diceNum = (int)((Math.random()*6)+1);
     MyX = x;
     MyY = y;
   }
   void roll()
   {
-    //your code here
     diceNum = (int)((Math.random()*6)+1);
   }
   void show()
   {
-    //your code here
-       int hue = (int)random(1,4);
-  if(hue == 1)
-  {
-    fill(#E5D9F2);
-  } 
-  else if(hue == 2)
-  {
-    fill(#F5EFFF);
-  }
-  else if (hue == 3)
-  {
-    fill(#CDC1FF);
-  }
-  else
-  {
-    fill(#A594F9);
-  }
-     rect(MyX - 30, MyY - 30, 60, 60, 10);
-  fill(0);
+    int hue = (int)random(1,4);
+    if(hue == 1)
+    {
+      fill(#E5D9F2);
+    } 
+    else if(hue == 2)
+    {
+      fill(#F5EFFF);
+    }
+    else if (hue == 3)
+    {
+      fill(#CDC1FF);
+    }
+    else
+    {
+      fill(#A594F9);
+    }
+    rect(MyX - 30, MyY - 30, 60, 60, 10);
+    fill(0);
      if(diceNum == 1){
        ellipse(MyX, MyY, 10, 10);
      } else if (diceNum == 2){
